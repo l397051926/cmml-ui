@@ -8,7 +8,7 @@
     <el-container>
 
       <el-aside width="200px">
-        <el-col :span="10">
+        <el-col :span="15" width="200px">
           <el-menu
             default-active="2"
             class="el-menu-vertical-demo"
@@ -66,7 +66,16 @@
 </template>
 
 <script>
-
+  export default {
+    methods: {
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath)
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath)
+      }
+    }
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -85,15 +94,11 @@
   }
 
   .el-aside {
-    border-style: none none none solid;
-    border-width: 1px;
     text-align: center;
     line-height: 200px;
   }
 
   .el-main {
-    border-style: none solid none solid;
-    border-width: 1px;
     text-align: center;
     line-height: 160px;
   }
