@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <router-link to="/user">zhangsan</router-link>
+
     <router-view/>
   </div>
 </template>

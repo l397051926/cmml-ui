@@ -5,17 +5,7 @@
       <my-header></my-header>
     </el-header>
 
-    <el-container>
-
-      <el-aside width="200px">
-        <my-aside></my-aside>
-      </el-aside>
-
-      <el-main>
-        <my-main></my-main>
-      </el-main>
-
-    </el-container>
+    <my-components></my-components>
 
     <el-footer>
       <my-footer></my-footer>
@@ -28,17 +18,15 @@
 <script>
 
   import myHeader from './header/Header'
-  import myAside from './container/Aside'
-  import myMain from './container/MyMain'
+  import myComponents from './container/Components'
   import myFooter from './footer/Footer'
 
   export default {
     name: 'Home',
     components: {
       myHeader,
-      myAside,
-      myMain,
-      myFooter
+      myFooter,
+      myComponents
     }
   }
 </script>
@@ -56,16 +44,6 @@
     border-width: 1px;
     text-align: center;
     line-height: 60px;
-  }
-
-  .el-aside {
-    text-align: center;
-    line-height: 200px;
-  }
-
-  .el-main {
-    text-align: center;
-    line-height: 160px;
   }
 
   body > .el-container {
