@@ -16,21 +16,9 @@
               <span>用户中心</span>
             </template>
 
-            <el-menu-item index="/user">
+            <el-menu-item v-for="(item, index) in userCenter" :index="item.namePath" :key="index">
               <template slot="title">
-                <span>用户管理</span>
-              </template>
-            </el-menu-item>
-
-            <el-menu-item index="/role" >
-              <template slot="title">
-                <span>角色管理</span>
-              </template>
-            </el-menu-item>
-
-            <el-menu-item index="/priority" >
-              <template slot="title">
-                <span>权限管理</span>
+                <span>{{item.name}}</span>
               </template>
             </el-menu-item>
 
@@ -58,6 +46,20 @@
     name: 'Components',
     data(){
       return{
+        userCenter: [
+          {
+            name: '用户管理',
+            namePath: '/user'
+          },
+          {
+            name: '角色管理',
+            namePath: '/role'
+          },
+          {
+            name: '权限管理',
+            namePath: '/priority'
+          }
+        ]
       }
     },
     methods: {

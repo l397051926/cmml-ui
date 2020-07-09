@@ -34,10 +34,11 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .el-header{
-    border-style: solid;
-    border-width: 1px;
-    text-align: right;
-    font-size: 20px
+    width: 100%;
+    height: 64px;
+    background: #2d2f34;
+    padding: 0 24px;
+    color: #fff;
   }
   .el-footer {
     border-style: solid;
