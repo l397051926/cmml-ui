@@ -22,13 +22,13 @@
               </template>
             </el-menu-item>
 
-            <el-menu-item index="role" >
+            <el-menu-item index="/role" >
               <template slot="title">
                 <span>角色管理</span>
               </template>
             </el-menu-item>
 
-            <el-menu-item index="priority" >
+            <el-menu-item index="/priority" >
               <template slot="title">
                 <span>权限管理</span>
               </template>
@@ -48,7 +48,6 @@
     </el-aside>
 
     <el-main>
-      <h2>main</h2>
       <router-view/>
     </el-main>
   </el-container>
