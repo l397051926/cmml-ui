@@ -13,22 +13,22 @@ export default new Router({
     {
       path: '/home',
       name: 'Home',
-      component: () => import('../components/Home.vue'),
+      component: () => import('../views/Home.vue'),
       children:[
         {
           path: '/user',
           name: 'User',
-          component: () => import('../components/userinfos/Users.vue')
+          component: () => import('../views/userinfos/Users.vue')
         },
         {
           path: '/role',
           name: 'Role',
-          component: () => import('../components/userinfos/Role.vue')
+          component: () => import('../views/userinfos/Role.vue')
         },
         {
           path: '/priority',
           name: 'Priority',
-          component: () => import('../components/userinfos/Priority.vue')
+          component: () => import('../views/userinfos/Priority.vue')
         }
       ]
     }

@@ -17,9 +17,9 @@
 
 <script>
 
-  import myHeader from './header/Header'
-  import myComponents from './container/Components'
-  import myFooter from './footer/Footer'
+  import myHeader from '../components/header/Header'
+  import myComponents from '../components/container/Components'
+  import myFooter from '../components/footer/Footer'
 
   export default {
     name: 'Home',

@@ -1,38 +1,47 @@
 <template>
   <div class="header">
     <div class="header-name">
-      <span>
-        商云平台
-      </span>
+      <i class="el-icon-lollipop"></i>
+      <span>商云平台</span>
     </div>
     <div class="header-user">
-      <span>
-        <i class="el-icon-user"></i>
-        王小虎
-      </span>
-      <span>
-        <i class="el-icon-user"></i>
-        退出
-      </span>
+      <i class="el-icon-user"></i>
+      <span>王小虎</span>
+    </div>
+    <div @click="quit" class="header-switch">
+      <i class="el-icon-switch-button"></i>
+      <span >退出</span>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'Header'
+    name: 'Header',
+    methods:{
+      quit: () =>{
+        console.log('退出')
+      }
+    }
   }
 </script>
 
 <style scoped>
+  .header{
+    display: flex;
+    position: fixed;
+    left: 15px;
+    right: 0px;
+    top: 20px;
+  }
   .header-user{
-    height: 40px;
-    width: auto;
-    line-height: 40px;
-    color: #FFFFFF;
-    text-align: right;
+    position: fixed;
+    right: 90px;
   }
-  .header-name{
-    text-align: left;
+  .header-switch{
+    position: fixed;
+    right: 20px;
+    cursor:pointer;
   }
+
 </style>
