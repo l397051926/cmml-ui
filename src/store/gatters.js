@@ -1,3 +1,3 @@
-export const gatters = {
+export default {
 
 }

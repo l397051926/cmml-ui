@@ -1,5 +1,5 @@
-import Vuex from 'vuex'
 import Vue from 'vue'
+import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
@@ -8,10 +8,10 @@ import gatters from './gatters'
 import action from './action'
 
 const state ={
-
+  token: ""
 }
 
-const store = new Vuex.store({
+export default new Vuex.Store({
   state,
   mutations,
   gatters,

@@ -1,9 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '../store/index'
 
 Vue.use(Router)
+const home = () => import('../views/Home.vue')
+const users = () => import('../views/userinfos/Users.vue')
+const role = () => import('../views/userinfos/Role.vue')
+const priority = () => import('../views/userinfos/Priority.vue')
+const login = () => import('../views/login/Login.vue')
 
-export default new Router({
+ const router = new Router({
   routes: [
     {
       path: '/',
@@ -13,25 +19,56 @@ export default new Router({
     {
       path: '/home',
       name: 'Home',
-      component: () => import('../views/Home.vue'),
+      component: home,
       children:[
+        {
+          path: '/',
+          redirect: '/user'
+        },
         {
           path: '/user',
           name: 'User',
-          component: () => import('../views/userinfos/Users.vue')
+          component: users
         },
         {
           path: '/role',
           name: 'Role',
-          component: () => import('../views/userinfos/Role.vue')
+          component: role
         },
         {
           path: '/priority',
           name: 'Priority',
-          component: () => import('../views/userinfos/Priority.vue')
+          component: priority
         }
       ]
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      meta: {
+        requireAuth: true
+      },
+      component: login
     }
   ],
   model: "history"
+ })
+
+router.beforeEach((from, to, next) => {
+  // store.state
+  if (from.path === '/login') {
+    next()
+  }else{
+    if (store.state.token) { // vuex.state判断token是否存在
+      console.log("login token")
+      next() // 已登录
+    } else {
+      console.log('no token')
+      next({
+        path: '/login'
+      })
+    }
+  }
 })
+
+export default router

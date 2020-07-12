@@ -7,16 +7,16 @@
 
 <script>
   import {request} from './utils/request'
-export default {
-  name: 'App',
-  methods:{
-    aa: () =>{
-      request({
-        url:"/user/test"
-      }).then()
+  export default {
+    name: 'App',
+    methods:{
+      aa: () =>{
+        request({
+          url:"/user/test"
+        }).then()
+      }
     }
   }
-}
 </script>
 
 <style>

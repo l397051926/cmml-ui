@@ -1,7 +1,7 @@
 <template>
   <el-container>
-    <el-aside width="200px">
-      <el-col :span="15" width="200px">
+    <el-aside >
+      <el-col :span="15">
         <el-menu
           default-active="this.$route.path"
           router
@@ -12,7 +12,7 @@
           <el-submenu index="1">
 
             <template slot="title">
-              <i class="el-icon-location"></i>
+              <i class="el-icon-user-solid"></i>
               <span>用户中心</span>
             </template>
 
@@ -74,5 +74,10 @@
 </script>
 
 <style scoped>
+  .el-container{
+    height: 400px;
+  }
+  .el-aside{
+  }
 
 </style>
