@@ -8,6 +8,7 @@ const users = () => import('../views/userinfos/Users.vue')
 const role = () => import('../views/userinfos/Role.vue')
 const priority = () => import('../views/userinfos/Priority.vue')
 const login = () => import('../views/login/Login.vue')
+const sign = () => import('../views/login/Sign.vue')
 
  const router = new Router({
   routes: [
@@ -49,6 +50,14 @@ const login = () => import('../views/login/Login.vue')
         requireAuth: true
       },
       component: login
+    },
+    {
+      path: '/sign',
+      name: 'Sign',
+      meta: {
+        requireAuth: true
+      },
+      component: sign
     }
   ],
   model: "history"
@@ -56,7 +65,7 @@ const login = () => import('../views/login/Login.vue')
 
 router.beforeEach((from, to, next) => {
   // store.state
-  if (from.path === '/login') {
+  if (from.path === '/login' || from.path === '/sign' ) {
     next()
   }else{
     if (store.state.token) { // vuex.state判断token是否存在

@@ -1,20 +1,15 @@
 <template>
   <div id="app">
     <router-view/>
-    <button @click="aa">按钮</button>
+    <h1>--{{this.$store.state.token}}</h1>
   </div>
 </template>
 
 <script>
-  import {request} from './utils/request'
   export default {
     name: 'App',
     methods:{
-      aa: () =>{
-        request({
-          url:"/user/test"
-        }).then()
-      }
+
     }
   }
 </script>

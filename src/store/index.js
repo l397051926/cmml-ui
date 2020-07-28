@@ -8,7 +8,8 @@ import gatters from './gatters'
 import action from './action'
 
 const state ={
-  token: ""
+  token: "aaa",
+  userName: ""
 }
 
 export default new Vuex.Store({

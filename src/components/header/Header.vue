@@ -6,7 +6,7 @@
     </div>
     <div class="header-user">
       <i class="el-icon-user"></i>
-      <span>王小虎</span>
+      <span>{{this.$store.state.userName}}</span>
     </div>
     <div @click="quit" class="header-switch">
       <i class="el-icon-switch-button"></i>
