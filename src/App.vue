@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <router-view/>
-    <h1>--{{this.$store.state.token}}</h1>
   </div>
 </template>
 

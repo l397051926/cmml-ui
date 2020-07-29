@@ -8,7 +8,7 @@ import gatters from './gatters'
 import action from './action'
 
 const state ={
-  token: "aaa",
+  token: "",
   userName: ""
 }
 
