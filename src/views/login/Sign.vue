@@ -101,7 +101,6 @@
                 email: this.ruleForm.email,
                 phone: this.ruleForm.phone
               }
-
             }).then(res => {
               this.$router.replace('/login')
             })

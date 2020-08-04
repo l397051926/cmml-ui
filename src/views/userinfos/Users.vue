@@ -1,10 +1,56 @@
 <template>
-    <h2>用户中心</h2>
+    <div>
+      <el-table
+        :data="tableData"
+        style="width: 100%"
+        height="250">
+        <el-table-column
+          prop="userName"
+          label="姓名"
+          width="120">
+        </el-table-column>
+        <el-table-column
+          prop="email"
+          label="邮箱"
+          width="120">
+        </el-table-column>
+        <el-table-column
+          prop="unit"
+          label="单位"
+          width="120">
+        </el-table-column>
+        <el-table-column
+          prop="phone"
+          label="电话"
+          width="120">
+        </el-table-column>
+        <el-table-column
+          prop="createTime"
+          label="创建时间"
+          width="120">
+        </el-table-column>
+      </el-table>
+    </div>
 </template>
 
 <script>
+  import {request} from '@/utils/request'
   export default {
-    name: 'Users'
+    name: 'Users',
+    data() {
+      return {
+        tableData: []
+      }
+    },
+    created: function () {
+      request({
+        url: '/user/user-info/all',
+        method: 'GET',
+      }).then(res => {
+        console.log(res.data.data)
+        this.tableData = res.data.data
+      })
+    }
   }
 </script>
 

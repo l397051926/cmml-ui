@@ -8,29 +8,23 @@
           class="el-menu-vertical-demo"
           @open="handleOpen"
           @close="handleClose">
-
           <el-submenu index="1">
-
             <template slot="title">
               <i class="el-icon-user-solid"></i>
               <span>用户中心</span>
             </template>
-
             <el-menu-item v-for="(item, index) in userCenter" :index="item.namePath" :key="index">
               <template slot="title">
                 <span>{{item.name}}</span>
               </template>
             </el-menu-item>
-
           </el-submenu>
-
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-s-grid"></i>
               <span>仓库管理</span>
             </template>
           </el-submenu>
-
         </el-menu>
       </el-col>
     </el-aside>
@@ -78,6 +72,10 @@
     height: 400px;
   }
   .el-aside{
+    background-color: red;
+  }
+  .el-main{
+    background-color: yellow;
   }
 
 </style>
