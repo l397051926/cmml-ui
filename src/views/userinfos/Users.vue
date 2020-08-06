@@ -1,4 +1,8 @@
 <template>
+  <div class="user-all">
+    <div>
+    <h1>hhhh</h1>
+    </div>
     <div>
       <el-table
         :data="tableData"
@@ -7,30 +11,35 @@
         <el-table-column
           prop="userName"
           label="姓名"
-          width="120">
+          width="170">
         </el-table-column>
         <el-table-column
           prop="email"
           label="邮箱"
-          width="120">
+          width="170">
         </el-table-column>
         <el-table-column
           prop="unit"
           label="单位"
-          width="120">
+          width="170">
         </el-table-column>
         <el-table-column
           prop="phone"
           label="电话"
-          width="120">
+          width="170">
         </el-table-column>
         <el-table-column
           prop="createTime"
           label="创建时间"
-          width="120">
+          width="170">
+        </el-table-column>
+        <el-table-column
+          label="操作"
+          width="170">
         </el-table-column>
       </el-table>
     </div>
+  </div>
 </template>
 
 <script>
@@ -55,5 +64,10 @@
 </script>
 
 <style scoped>
+  .user-all{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
+  }
 </style>

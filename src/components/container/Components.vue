@@ -1,6 +1,6 @@
 <template>
-  <el-container>
-    <el-aside >
+  <div class="components-all">
+    <div class="components-left">
       <el-col :span="15">
         <el-menu
           default-active="this.$route.path"
@@ -27,12 +27,12 @@
           </el-submenu>
         </el-menu>
       </el-col>
-    </el-aside>
+    </div>
 
-    <el-main>
+    <div class="componets-right">
       <router-view/>
-    </el-main>
-  </el-container>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -68,14 +68,15 @@
 </script>
 
 <style scoped>
-  .el-container{
-    height: 400px;
+  .components-all{
+    display: flex;
   }
-  .el-aside{
-    background-color: red;
+  .components-left{
+    width: 13%;
   }
-  .el-main{
-    background-color: yellow;
+  .componets-right{
+    height: 450px;
+    width: 87%;
   }
 
 </style>
