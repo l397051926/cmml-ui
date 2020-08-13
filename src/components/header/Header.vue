@@ -19,8 +19,8 @@
   export default {
     name: 'Header',
     methods:{
-      quit: () =>{
-        console.log('退出')
+      quit () {
+        this.$router.replace('/login')
       }
     }
   }
